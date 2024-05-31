@@ -40,8 +40,7 @@ namespace ProductRegistryAPI.Commands.Suppliers
                 Name = request.Name,
                 CNPJ = formattedCNPJ,
                 Address = address,
-                Phone = request.Phone,
-                Products = request.Products
+                Phone = request.Phone
             };
 
             if (_context.Suppliers.Any(s => s.CNPJ == supplier.CNPJ))

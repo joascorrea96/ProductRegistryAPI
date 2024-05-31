@@ -15,6 +15,10 @@ namespace ProductRegistryAPI.Models
         public UnitOfMeasure UnitOfMeasure { get; set; }
         [Required]
         public string PhotoUrl { get; set; }
+        [Required]
+        public int SupplierId { get; set; }
+        [ForeignKey("SupplierId")]
+        public Supplier Supplier { get; set; }
     }
 
     public enum UnitOfMeasure

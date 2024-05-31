@@ -24,6 +24,7 @@ namespace ProductRegistryAPI.Commands.Products
                 Brand = request.Brand,
                 UnitOfMeasure = request.UnitOfMeasure,
                 PhotoUrl = request.PhotoUrl,
+                SupplierId = request.SupplierId
             };
 
             if (_context.Products.Any(p => p.Description == product.Description && p.Brand == product.Brand))

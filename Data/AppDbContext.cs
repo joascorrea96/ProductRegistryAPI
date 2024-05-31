@@ -19,6 +19,12 @@ namespace ProductRegistryAPI.Data
                 .HasIndex(p => new { p.Description, p.Brand })
                 .IsUnique();
 
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Supplier)
+                .WithMany(S => S.Products)
+                .HasForeignKey(p => p.SupplierId);
+ 
+
             modelBuilder.Entity<Supplier>()
                 .HasIndex(s => s.CNPJ)
                 .IsUnique();
