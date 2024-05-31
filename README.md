@@ -15,12 +15,7 @@ Para clonar e executar o projeto:
 - dotnet ef database update
 - Executar Procedure abaixo via SQL Server: 
 
-CREATE PROCEDURE GetProductsBySupplier
-    @SupplierId INT
-AS
-BEGIN
-    SET NOCOUNT ON;
-    
+CREATE PROCEDURE GetProductsBySupplier @SupplierId INT AS BEGIN SET NOCOUNT ON;
     SELECT 
         Id,
         Description,
