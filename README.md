@@ -15,7 +15,7 @@ Para clonar e executar o projeto:
 - dotnet ef database update
 - Executar Procedure abaixo via SQL Server: 
 
-__CREATE PROCEDURE GetProductsBySupplier
+CREATE PROCEDURE GetProductsBySupplier
     @SupplierId INT
 AS
 BEGIN
@@ -32,4 +32,4 @@ BEGIN
         Products
     WHERE 
         SupplierId = @SupplierId;
-END;__
+END;
